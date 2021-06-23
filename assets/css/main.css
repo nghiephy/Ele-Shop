@@ -722,6 +722,7 @@
     box-shadow: 0 1px 2px #e0e0e0;
     background-color: var(--white-color);
     display: none;
+    z-index: 1;
 }
 
 .header__search-history-heading {
@@ -865,13 +866,18 @@
     background-color: #F5F5F5;
 }
 
+.app_content {
+    padding-top: 36px;
+}
+
 .category {
     border-radius: 2px;
     background-color: var(--white-color);
 }
 
 .category__heading {
-    padding: 10px 16px;
+    margin-top: 0;
+    padding: 12px 16px;
     font-size: 1.6rem;
     color: var(--text-color);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -889,9 +895,6 @@
     padding-left: 0;
     padding-bottom: 8px;
     list-style: none;
-}
-
-.category-item {
 }
 
 .category-item--active .category-item__link {
@@ -922,4 +925,80 @@
 .category-item__link:hover {
     right: -4px;
     color: var(--primary-color);
+}
+
+/* Home sort filter */
+.home-filter {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.home-filter__page {
+    display: flex;
+    align-items: center;
+}
+
+.home-filter__label {
+    font-size: 1.4rem;
+    color: #555555;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    min-width: 90px;
+    margin-right: 12px;
+}
+
+.home-filter__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.home-filter__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filter__page-current {
+    color: var(--primary-color);
+}
+
+.home-filter__page-btn {
+    flex: 1;
+    text-decoration: none;
+    display: flex;
+    background-color: var(--white-color);
+}   
+
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #EEE;
+}
+
+.home-filter__page-control {
+    width: 72px;
+    height: 36px;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 1px 2px #e0e0e0;
+}
+
+.home-filter__page-icon  {
+    margin: auto;
+    color: #555;
+    font-size: 1.4rem;
+}   
+
+.home-filter__page-btn--disable {
+    cursor: default;
+    background-color: #f9f9f9;
+}
+
+.home-filter__page-btn--disable .home-filter__page-icon {
+    color: #ccc;
 }
