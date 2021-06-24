@@ -239,7 +239,7 @@
     animation: headerNotifyGrowth ease-out 0.19s;
     will-change: opacity, transform;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__notify::after {
@@ -671,6 +671,7 @@
     box-shadow: 0 1px 2px #e0e0e0;
     display: none;
     animation: fadeIn ease-in 0.1s;
+    z-index: 1;
 }
 
 .header__search-option::before {
@@ -764,6 +765,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+    max-height: 50vh;
+    overflow-y: auto;
     background-color: #FDFDFD;
 }
 
@@ -806,10 +809,18 @@
 }
 
 .header__cart-item-name{
+    flex: 1;
     margin: 0;
     font-size: 1.4rem;
     font-weight: 500;
+    line-height: 1.9rem;
+    max-height: 3.8rem;
+    overflow: hidden;
     color: var(--text-color);
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .header__cart-item-price{
@@ -878,24 +889,33 @@
 
 .category__heading {
     margin-top: 0;
+    text-transform: uppercase;
     padding: 12px 16px;
     font-size: 1.6rem;
     color: var(--text-color);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.category__heading-icon {
-    position: relative;
-    font-size: 1.4rem;
-    margin-right: 6px;
-    top: -0.5px;
-}
-
 .category-list {
-    margin-left: 10px;
     padding-left: 0;
     padding-bottom: 8px;
     list-style: none;
+}
+.category-item:first-child::before {
+    display: none;
+}
+
+.category-item {
+    position: relative;
+}
+
+.category-item::before {
+    border-top: 1px solid #E1E1E1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20px;
+    left: 20px;
 }
 
 .category-item--active .category-item__link {
@@ -914,17 +934,15 @@
 
 .category-item__link {
     position: relative;
-    right: 0;
-    padding: 8px 15px;
+    padding: 12px 20px;
     font-size: 1.6rem;
     color: var(--text-color);
     text-decoration: none;
     display: inline-block;
-    transition: right liner 0.1s;
+    width: 100%;
 }
 
 .category-item__link:hover {
-    right: -4px;
     color: var(--primary-color);
 }
 
@@ -1030,6 +1048,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .product-item__name{
@@ -1117,10 +1137,6 @@
     color: #595959;
 }   
 
-.product-item__origin-name{
-
-}
-
 .product-item__brand{
     margin-right: auto;
 }
@@ -1168,6 +1184,7 @@
     height: 36px;
     text-align: center;
     background-color: rgba(255, 216, 64, 0.94);
+    border-top-right-radius: 2px;
 }
 
 .product-item__sale-off::after {
