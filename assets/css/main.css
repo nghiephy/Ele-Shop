@@ -1296,15 +1296,68 @@
     color: transparent;
     text-decoration: none;
 }
-                                
-.footer__text {
-    margin: 0 auto;
+
+.footer__bottom {
+    color: rgb(112 112 112);
+    padding: 24px 0;
+    background-color: #f5f5f5;
+}
+
+.footer-policy {
+    margin: 16px 0 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-policy__item {
+    padding: 0 16px;
+    border-left: 1px solid rgb(223 223 223);
+}
+
+.footer-policy__item-link {
+    text-decoration: none;
+    color: rgb(112 112 112);
+    font-size: 1.4rem;
+}
+
+.footer-img-policy {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    margin: 0 80px;
+}
+
+.footer-img-policy__link {
+    width: 48px;
+    height: 48px;
+    background-position: 89.5397489539749% 27.54491017964072%;
+    background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/49b5753902db445292818641f17183b0.png);
+}
+
+.footer-img-policy-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom-info {
+    width: 100%;
     text-align: center;
     font-size: 1.2rem;
 }
+                                
+.footer__text {
+    margin: 0 auto;
+}
 
-.footer__bottom {
-    padding: 24px 0;
-    background-color: #f5f5f5;
+.footer__text:last-child {
+    margin-bottom: 16px;
+}
+
+.footer-company-name {
+    margin: 16px 0 24px;
 }
 
