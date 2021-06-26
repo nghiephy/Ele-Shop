@@ -7,8 +7,10 @@
     --star-gold-color: #FFCE3E;
 
     --header-height: 120px;
+    --header-height-cart: 135px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-with-search-height-cart: calc(var(--header-height-cart) - var(--navbar-height));
 }
 
 * {
@@ -52,6 +54,18 @@ html {
     padding-left: 5px;
     padding-right: 5px;
     width: 20%;
+}
+
+.grid__column-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.grid__column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
 }
 
 .grid__column-10 {
@@ -235,10 +249,6 @@ html {
     line-height: var(--height);
     text-decoration: none;
     border-radius: 2px;
-}
-
-.pagination-item__icon {
-
 }
 
 .pagination-item--active .pagination-item__link {

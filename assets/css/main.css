@@ -525,6 +525,13 @@
     display: flex;
 }
 
+.header__cart-icon-wrap {
+    display: block;
+    height: 40px;
+    width: 100%;
+    text-decoration: none;
+}
+
 .header__cart-wrap {
     position: relative;
     padding: 7px 12px;
