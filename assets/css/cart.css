@@ -97,7 +97,7 @@
 
 /* Body guide */
 .body-guide {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding: 0 16px;
     height: 42px;
     width: 100%;
@@ -120,13 +120,22 @@
     opacity: 0.99;
 }
 
-.cart-detail {
+.cart-detail,
+.buy-section {
     width: 100%;
     background-color: #f5f5f5;
 }
 
+.buy-section {
+    box-shadow: 0 0 20px 1px #e0e0e0;
+    margin: 12px 0 32px;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+}
+
 .cart-detail-heading {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding: 0 40px;
     height: 55px;
     width: 100%;
@@ -198,11 +207,13 @@ span.cart-detail-heading__text {
 }
 
 .cart-detail-body__shop-list {
+    background-color: #f5f5f5;
     list-style: none;
     padding-left: 0;
 }
 
 .cart-detail-body__shop-item {
+    margin-bottom: 12px;
     background-color: var(--white-color);
 }
 
@@ -233,6 +244,20 @@ span.cart-detail-heading__text {
 
 .shop-item__voucher-icon {
     cursor: default;
+}
+
+.new-label .shop-item__voucher-new-label {
+    display: inline;
+}
+
+.shop-item__voucher-new-label {
+    min-width: 18px;
+    height: 18px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: default;
+    display: none;
 }
 
 /* cart body -- list product of shop */
@@ -418,4 +443,100 @@ span.cart-detail-heading__text {
 
 .shop-item__freeship-icon {
     color: rgb(0 191 165);
+}
+
+/* Buy section */
+.shop-voucher,
+.shop-coin,
+.buy-control {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    padding: 12px 32px;
+    background-color: var(--white-color);
+    border-bottom: 1px dashed var(--boder-color);
+}
+
+.shop-voucher__option {
+    margin-left: 12px;
+    text-align: right;
+    color: rgb(0 85 170);
+    cursor: pointer;
+}
+
+.shop-voucher__label,
+.shop-coin__label {
+    float: left;
+    color: rgb(51 51 51);
+}
+
+.shop-voucher__label span,
+.shop-coin__label span {
+    margin-left: 10px;
+    font-size: 1.6rem;
+}
+
+.shop-coin {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 16px 32px;
+    height: 50px;
+}
+
+.shop-coin__checkbox {
+    float: right;
+}
+
+.shop-coin__total-coin {
+    margin-left: 12px;
+    text-align: right;
+    font-size: 1.6rem;
+}
+
+.buy-control {
+    font-size: 1.6rem;
+    height: 64px;
+    padding: 12px 20px;
+    border-bottom: none;
+}
+
+.control-product,
+.control-buying {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.control-product {
+    float: left;
+}
+
+.control-product span {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.control-product__store {
+    color: var(--primary-color);
+}
+
+.control-buying {
+
+    justify-content: flex-end;
+}
+
+.control-buying__btn-buy {
+    margin: 0 12px;
+    width: 210px;
+    height: 40px;
+    padding: 13px 36px;
+}
+
+.control-buying__total-price {
+    font-size: 2.4rem;
+    margin-left: 6px;
+    color: var(--primary-color);
 }

@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="navbar">
+            <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
                     <!-- begin list element in navbar-->
                     <ul class="navbar__list">
                         <li class="navbar__list-item display-qr-code navbar__list-item--separate">
@@ -133,13 +135,24 @@
 
                     <!-- Begin header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+
+                        <div class="header-mobile__control hide-on-tablet-pc">
+                            <label for="mobile-bars-checkbox" class="header__mobile-bars">
+                                <i class="header__mobile-bars-icon fas fa-bars"></i>
+                            </label>
+    
+                            <label for="mobile-search-checkbox" class="header__mobile-search">
+                                <i class="header__mobile-search-icon fas fa-search"></i>
+                            </label>
+                        </div>
+
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <img src="./assets/img/logo_crop_removebg.png" alt="logo" srcset="">
                                 <h4 class="header__logo-text">Ele-shop</h4>
                             </a>
                         </div>
-                        <div class="header__search">
+                        <div class="header__search hide-on-mobile">
                             <div class="header__search-input-wrap">
                                 <input class="header__search-input" type="text" placeholder="Tìm trong shop này">
                                 <div class="header__search-history">
@@ -336,10 +349,80 @@
                         </div>
                     </div>
             </div>
+
+            <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+            <input type="checkbox" hidden id="mobile-bars-checkbox" class="header__bars-checkbox">
+
+            <div class="inner-outline header-mobile__search hide-on-tablet-pc">
+                <div class="header__search-input-wrap">
+                    <input class="header__search-input" type="text" placeholder="Tìm trong shop này">
+                    <div class="header__search-history">
+                        <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                        <ul class="header__search-history-list">
+                            <li class="header__search-history-item">
+                                <a href="">Váy chống nắng</a>
+                            </li>
+                            <li class="header__search-history-item">
+                                <a href="">Mặt nạ phòng độc</a>
+                            </li>
+                            <li class="header__search-history-item">
+                                <a href="">Bình xịt côn trùng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__search-select">
+                    <div class="header__search-select-label">Trong shop</div>
+                    <i class="header__search-select-icon fas fa-angle-down"></i>
+
+                    <ul class="header__search-option">
+                        <li class="header__search-option-item header__search-option-item--selected">
+                            <span>Trong shop</span>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="header__search-option-item">
+                            <span>Ngoài shop</span>
+                            <i class="fas fa-check"></i>
+                        </li>
+                    </ul>
+                </div>
+                <button class="header__search-btn"> 
+                    <i class="header__search-btn-icon fas fa-search"></i>
+                </button>
+            </div>
+
+            <label for="mobile-bars-checkbox" class="bars-overlay hide-on-tablet-pc"></label>
+
+            <div class="header-mobile__bars hide-on-tablet-pc">
+                <label for="mobile-bars-checkbox" class="bars-close">
+                    <i class="fas fa-times"></i>
+                </label>
+                
+                <ul class="bars-list">
+                    <li class="bars-item">Đăng Nhập</li>
+                    <li class="bars-item">Đăng Ký</li>
+                    <li class="bars-item">Đăng Xuất</li>
+                </ul>
+            </div>
+
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên Quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới Nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán Chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -362,7 +445,7 @@
                     </div>
     
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -1017,7 +1100,7 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                    <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -1104,7 +1187,7 @@
             </div>
 
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row">
                         <ul class="footer-policy">
                             <li class="footer-policy__item">

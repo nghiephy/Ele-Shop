@@ -326,7 +326,11 @@
                                      <!-- Voucher section -->
                                      <div class="shop-item__voucher-wrap grid__full-width">
                                         <i class="cart-icon fas fa-ticket-alt"></i>
-                                        <span class="heading-text-cart-page shop-item__voucher-label margin-left-10">Shop Voucher giảm đến ₫50k</span>
+                                        <!-- class: new-label => add the new label beside the text -->
+                                        <span class="heading-text-cart-page new-label shop-item__voucher-label margin-left-10">
+                                            Shop Voucher giảm đến ₫50k
+                                            <span class="btn btn--primary shop-item__voucher-new-label">Mới</span>
+                                        </span>
                                         <span class="shop-item__voucher-see-more">Xem Thêm Voucher</span>
                                     </div>
                                     <!-- Free-ship section -->
@@ -336,10 +340,141 @@
                                         <span class="shop-item__freeship-see-more">Tìm hiểu thêm</span>
                                     </div>
                                 </li>
+                                <li class="cart-detail-body__shop-item">
+                                    <!-- Name of shop -->
+                                    <div class="shop-item__name-wrap grid__full-width">
+                                        <div class="input-wraper">
+                                            <input type="checkbox" name="name-shop" id="" >
+                                            <label class="checkmark" for=""></label>
+                                        </div>
+                                        <a href="" class="btn btn--primary shop-item__liked-btn">Yêu thích</a>
+                                        <span class="heading-text-cart-page shop-item__name">Merzy Official Store</span>
+                                        <i class="cart-icon add-pointer fas fa-envelope"></i>
+                                    </div>
+                                    <!-- list products of shop -->
+                                    <ul class="shop-item-products-list">
+                                        <li class="shop-item-product-item">
+                                            <!-- Bonus section -->
+                                            <!-- <div class="shop-item-product-item__bonus">
+                                                <span class="shop-item-product-item__bonus-lable">Quà tặng</span>
+                                                <span class="shop-item-product-item__bonus-msg" >Mua nhiều hơn ₫1.000 và nhận được 5 quà tặng</span>
+                                                <a class="shop-item-product-item__bonus-link" href="">
+                                                    Thêm
+                                                    <i class="shop-item-product-item__bonus-icon fas fa-chevron-right"></i>
+                                                </a>
+                                            </div> -->
+                                            <!-- Product information section -->
+                                            <div class="shop-item-product-item__product">
+                                                <div class="item-product__name grid__column-5-5">
+                                                    <div class="input-wraper">
+                                                        <input type="checkbox" name="" id="">
+                                                        <label class="checkmark" for=""></label>
+                                                    </div>
+                                                    <a href="" class="name-wraper">
+                                                        <img class="name-wraper__img" src="./assets/img/product_17.JPG" alt="">
+                                                        <span class="name-wraper__text">Son kem lì Merzy The First Velvet Tint 4,5g</span>
+                                                    </a>
+                                                    <div class="kind-product">
+                                                        <div class="kind-product__label">Phân Loại Hàng: 
+
+                                                        </div>
+                                                        <div class="kind-product__value">V13 Ver.BLUE</div>
+                                                    </div>
+
+                                                </div>
+                        
+                                                <div class="item-product__infor grid__column-6-5">
+                                                        <div class="product-infor__price grid__column-4">
+                                                            <span class="product-infor__price-old">₫278.000</span>
+                                                            <span class="product-infor__price-new">₫139.000</span>
+                                                        </div>
+                                                        <div class="product-infor__quantity grid__column-4">
+                                                            <span class="product-infor__quantity-btn">
+                                                                <i class="fas fa-minus"></i>
+                                                            </span>
+                                                            <input type="text" class="product-infor__quantity-input" placeholder="1">
+                                                            <span class="product-infor__quantity-btn">
+                                                                <i class="fas fa-plus"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="product-infor__total grid__column-2">₫139.000</div>
+                                                        <div class="product-infor__operator grid__column-2">
+                                                            <span class="product-infor__operator-delete">Xóa</span>
+                                                            <span class="product-infor__operator-find">Tìm sản phẩm tương tự</span>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                     <!-- Voucher section -->
+                                     <div class="shop-item__voucher-wrap grid__full-width">
+                                        <i class="cart-icon fas fa-ticket-alt"></i>
+                                        <!-- class: new-label => add the new label beside the text -->
+                                        <span class="heading-text-cart-page new-label shop-item__voucher-label margin-left-10">
+                                            Shop Voucher giảm đến ₫50k
+                                            <span class="btn btn--primary shop-item__voucher-new-label">Mới</span>
+                                        </span>
+                                        <span class="shop-item__voucher-see-more">Xem Thêm Voucher</span>
+                                    </div>
+                                    <!-- Free-ship section -->
+                                    <div class="shop-item__freeship-wrap grid__full-width">
+                                        <i class="cart-icon shop-item__freeship-icon fas fa-truck"></i>
+                                        <span class="heading-text-cart-page shop-item__freeship-label margin-left-10">
+                                            Miễn Phí Vận Chuyển cho đơn hàng từ ₫50.000 (giảm tối đa ₫25.000)
+                                        </span>
+                                        <span class="shop-item__freeship-see-more">Tìm hiểu thêm</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    
+                    <div class="buy-section">
+                        <!-- Shop voucher section -->
+                        <div class="shop-voucher">
+                            <div class="grid__column-7"></div>
+                            <div class="grid__column-3 shop-voucher__label">
+                                <i class="cart-icon fas fa-ticket-alt"></i>
+                                <span>Shopee Voucher</span>
+                            </div>
+                            <div class="grid__column-2 shop-voucher__option">
+                                <span>Chọn Hoặc Nhập Mã</span>
+                            </div>
+                            
+                        </div>
+                        <!-- Shop coin section -->
+                        <div class="shop-coin">
+                            <div class="grid__column-7">
+                                <div class="shop-coin__checkbox input-wraper">
+                                    <input type="checkbox" name="name-shop" id="" >
+                                    <label class="checkmark" for=""></label>
+                                </div>
+                            </div>
+                            <div class="shop-coin__label grid__column-3">
+                                <i class="cart-icon fas fa-comments-dollar"></i>
+                                <span>Ele-Shop Xu</span>
+                            </div>
+                            <div class="shop-coin__total-coin grid__column-2">
+                                <span >- ₫1.000</span>
+                            </div>
+                        </div>
+                        <!-- Buy control section -->
+                        <div class="buy-control">
+                            <div class="control-product grid__column-7">
+                                <div class="control-product__checkbox input-wraper">
+                                    <input type="checkbox" name="name-shop" id="" >
+                                    <label class="checkmark" for=""></label>
+                                </div>
+                                <span class="control-product__select-all">Chọn Tất Cả (3)</span>
+                                <span class="control-product__remove">Xóa</span>
+                                <span class="control-product__store">Lưu Vào Thư Mục Đã Thích</span>
+                            </div>
+                            <div class="control-buying grid__column-5">
+                                <span class="control-buying__label">Tổng thanh toán (0 Sản phẩm):</span>
+                                <span class="control-buying__total-price">₫0</span>
+                                <button class="btn btn--primary control-buying__btn-buy">Mua Hàng</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
 
