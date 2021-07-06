@@ -1,3 +1,10 @@
+/* PC */
+@media (min-width: 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+
 /* PC & Tablet */
 @media (min-width: 740px) {
     .hide-on-tablet-pc {
@@ -7,10 +14,7 @@
 
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
-    :root {
-        --header-height: 68px;
-        --navbar-height: 0px;
-    }
+    
 
     .hide-on-mobile-tablet {
         display: none;
@@ -43,10 +47,41 @@
     .header__sort-bar {
         display: flex;
     }
+
+    .app_content {
+        padding-top: 8px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        justify-content: flex-end;
+    }
+
+    .header__cart-wrap {
+        margin: 0;
+    }
 }
 
 /* Mobile */
 @media (max-width: 739px) {
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
     .hide-on-mobile {
         display: none;
     }
@@ -61,8 +96,12 @@
     }
 
     .header__logo img {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .header__logo-text {
+        font-size: 2.6rem;
     }
 
     .header__search-btn {
@@ -77,21 +116,55 @@
         right: 0;
         width: 100%;
     }
+
+    .container {
+        margin-left:  8px;
+        margin-right:  8px;
+    }
+
+    .pagination-item__link {
+        --height: 22px;
+        font-size: 1.6rem;
+        min-width: 20px;
+    }
+
+    .footer__content {
+        width: 80vw;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__download,
+    .footer-item__link {
+        justify-content: center;
+    }
+    
+    .footer__download-apps {
+        flex: none;
+    }
+
+    .footer__download-app-link {
+        display: block;
+        padding: 6px 8px;
+    }
+    
 }
 
-/* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
-    .hide-on-tablet {
-        display: none;
+/* Low Mobile */
+@media (max-width: 520px) {
+    .footer-img-policy-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .header__cart {
-        width: 80px;
-        justify-content: flex-end;
-    }
-
-    .header__cart-wrap {
-        margin: 0;
+    .footer-img-policy {
+        margin-left: 0;
     }
 }
+
+
 

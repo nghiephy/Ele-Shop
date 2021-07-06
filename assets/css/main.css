@@ -1,3 +1,6 @@
+.app {
+    overflow: hidden;
+}
 
 .header {
     position: fixed;
@@ -671,6 +674,7 @@
 .header__bars-checkbox:checked ~ .header-mobile__bars {
     transform: translateX(0%);
     opacity: 1;
+    transition: transform linear 0.2s, opacity linear 0.2s;
 }
 
 .header__cart {
@@ -692,6 +696,7 @@
     display: inline-block;
     margin: auto;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-icon {
@@ -1201,6 +1206,60 @@
     color: #ccc;
 }
 
+.mobile-category {
+
+}
+
+.mobile-category__list {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobile-category__item:nth-of-type(3n + 1) .mobile-category__link {
+    background-color: #87AFD8;
+}
+
+.mobile-category__item:nth-of-type(3n + 2) .mobile-category__link {
+    background-color: #76C9BD;
+}
+
+.mobile-category__item:nth-of-type(3n + 3) .mobile-category__link {
+    background-color: #88CF81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * 2);
+    text-align: center;
+    width: 110px;
+    display: block;
+    border-radius: 4px;
+    font-weight: 300;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    -webkit-user-select: none;
+    padding: 0 5px;
+}
+
+
 /* Home product */
 .product-item {
     display: block;
@@ -1396,6 +1455,11 @@
     background-color: var(--white-color);
 }
 
+.footer__content {
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
 .footer__heading {
     font-size: 1.4rem;
     color: var(--text-color);
@@ -1486,10 +1550,22 @@
 }
 
 .footer-img-policy {
-    display: inline-flex;
-    width: 48px;
+    display: block;
+    width: 155px;
     height: 48px;
-    margin: 0 80px;
+    margin-left: 80px;
+}
+
+.footer-img-policy:first-child {
+    margin-left: 0px;
+}
+
+.footer-img-policy:last-child {
+    width: 48px;
+}
+
+.footer-img-policy img {
+    height: 100%;
 }
 
 .footer-img-policy__link {
@@ -1502,6 +1578,7 @@
 .footer-img-policy-wrap {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -1513,6 +1590,7 @@
                                 
 .footer__text {
     margin: 0 auto;
+    padding: 0 2px;
 }
 
 .footer__text:last-child {
