@@ -267,6 +267,16 @@
 
 .header__sort-item--active .header__sort-link {
     color: var(--primary-color);
+    
+}
+
+.header__sort-item--active .header__sort-link::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid var(--primary-color);
+    bottom: 0;
+    left: 15%;
+    right: 15%;
 }
 
 .header__sort-link::before {
@@ -1077,12 +1087,13 @@
     padding-bottom: 8px;
     list-style: none;
 }
-.category-item:first-child::before {
-    display: none;
-}
 
 .category-item {
     position: relative;
+}
+
+.category-item:first-child::before {
+    display: none;
 }
 
 .category-item::before {

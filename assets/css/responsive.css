@@ -28,12 +28,17 @@
         padding: 0 calc((100% - 644px)/2);
     }
 
+    .header__cart-wrap:hover .header__cart-list,
     .header__cart-list::before {
         display: none;
     }
 
     .header__cart-icon-wrap {
         pointer-events: none;
+    }
+
+    #header__cart-wrap-checkbox:checked ~ .header__cart-list {
+        display: block;
     }
 
     .header__cart-list-item {
