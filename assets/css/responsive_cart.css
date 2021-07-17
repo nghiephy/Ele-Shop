@@ -1,0 +1,96 @@
+/* PC */
+@media (min-width: 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+
+/* PC & Tablet */
+@media (min-width: 740px) {
+    .hide-on-tablet-pc {
+        display: none;
+    }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        height: var(--header-height-cart) - var(--navbar-height);
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        justify-content: flex-end;
+    }
+
+    .header__cart-wrap {
+        margin: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .footer__content {
+        width: 80vw;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__download,
+    .footer-item__link {
+        justify-content: center;
+    }
+    
+    .footer__download-apps {
+        flex: none;
+    }
+
+    .footer__download-app-link {
+        display: block;
+        padding: 6px 8px;
+    }
+    
+}
+
+/* Low Mobile */
+@media (max-width: 520px) {
+    .footer-img-policy-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-img-policy {
+        margin-left: 0;
+    }
+}
+
+
+

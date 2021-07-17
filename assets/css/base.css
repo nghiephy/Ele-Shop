@@ -185,6 +185,11 @@ html {
     line-height: 1.6rem;
 }
 
+.btn-back:hover {
+    color: #333;
+    background: #f8f8f8;
+}
+
 .btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -192,6 +197,10 @@ html {
 .btn.btn--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
+}
+
+.btn--primary:hover {
+    opacity: 0.9;
 }
 
 .btn.btn--disable {
@@ -202,6 +211,13 @@ html {
 .btn--size-s {
     height: 32px;
     font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+.btn--size-l {
+    min-width: 140px;
+    height: 38px;
+    font-size: 1.5rem;
     padding: 0 8px;
 }
 
