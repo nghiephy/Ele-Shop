@@ -554,14 +554,6 @@
     align-items: center;
 }
 
-.header__mobile-search {
-
-}
-
-.header__mobile-bars {
-
-}
-
 .header__mobile-bars-icon,
 .header__mobile-search-icon {
     font-size: 2.6rem;
@@ -1218,10 +1210,6 @@
     color: #ccc;
 }
 
-.mobile-category {
-
-}
-
 .mobile-category__list {
     padding-left: 0;
     list-style: none;
@@ -1267,7 +1255,6 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    -webkit-user-select: none;
     padding: 0 5px;
 }
 
