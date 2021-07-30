@@ -55,7 +55,7 @@
 
 .navbar__list-user-menu {
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     right: 0;
     top: 118%;
     list-style: none;
@@ -307,7 +307,7 @@
     animation: headerNotifyGrowth ease-out 0.19s;
     will-change: opacity, transform;
     display: none;
-    z-index: 2;
+    z-index: 4;
 }
 
 .header__notify::after {
