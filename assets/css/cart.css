@@ -347,7 +347,7 @@ span.cart-detail-heading__text {
 }
 
 .name-wraper__text {
-    padding: 5px 10px 0;
+    padding: 0 10px;
     font-size: 1.4rem;
     color: rgba(0,0,0,0.8);
 }
@@ -390,8 +390,6 @@ span.cart-detail-heading__text {
 }
 
 .kind-product__selection {
-    width: 365px;
-    height: 350px;
     padding: 20px;
     position: absolute;
     top: 130%;
@@ -404,6 +402,7 @@ span.cart-detail-heading__text {
     display: none;
 }
 
+.shop-item__more-voucher::after,
 .kind-product__selection::after {
     content: "";
     position: absolute;
@@ -416,6 +415,10 @@ span.cart-detail-heading__text {
     left: 50%;
     background: var(--white-color);
     transform: rotate(45deg);
+}
+
+.shop-item__more-voucher::after {
+    left: 8%;
 }
 
 .kind-product__option {
@@ -589,7 +592,7 @@ span.cart-detail-heading__text {
 
 .product-infor__similar-pro {
     position: absolute;
-    right: -46%;
+    right: -41%;
     top: 100%;
     height: 410px;
     width: 1200px;
@@ -650,12 +653,137 @@ span.cart-detail-heading__text {
 }
 
 /* Voucher  */
-.shop-item__voucher-see-more,
+.shop-item__voucher-see-more > label,
 .shop-item__freeship-see-more {
     font-size: 1.4rem;
     cursor: pointer;
     color: rgb(0 85 170);
     margin-left: 10px;
+    user-select: none;
+}
+
+.shop-item__voucher-see-more {
+    position: relative;
+}
+
+.shop-item__more-voucher {
+    position: absolute;
+    top: 170%;
+    left: 20%;
+    width: 500px;
+    padding: 30px;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 2px 1px var(--boder-color);
+    z-index: 1;
+    display: none;
+}
+
+.more-voucher-checkbox:checked ~ .shop-item__more-voucher {
+    display: block;
+}
+
+.more-voucher__heading {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.more-voucher__input {
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    background-color: #f8f8f8;
+}
+
+.more-voucher__input-label {
+    color: var(--text-color);
+}
+
+.more-voucher__input-select {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid var(--boder-color);
+    outline: none;
+}
+
+.more-voucher__list {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    list-style: none;
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+.more-voucher__note {
+    display: block;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    text-align: left;
+    color: var(--text-color);
+    opacity: 0.9;
+    background-color: #fef7e7;
+}
+
+.more-voucher__item {
+    height: var(--voucher-item-height);
+    width: 100%;
+    display: flex;
+    margin: 15px 0;
+    border: 1px solid var(--boder-color);
+    justify-content: space-between;
+}
+
+.voucher-item__img {
+    height: var(--voucher-item-height);
+    width: var(--voucher-item-height);
+    padding: 18px;
+    border-right: 1px solid var(--boder-color);
+}
+
+.voucher-item__img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.voucher-item__body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.voucher-body-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.voucher-body-content__title {
+    font-size: 1.6rem;
+    color: #000000de;
+    margin-bottom: 10px;
+}
+
+.voucher-body-content__expire {
+    font-size: 1.2rem;
+    color: #0000008a;
+}
+
+.voucher-body-btn {
+    width: 64px;
+    min-width: unset;
+}
+
+.btn-delete-on-mobile {
+    width: 40px;
+    min-width: unset;
+    display: none;
 }
 
 .shop-item__freeship-icon {

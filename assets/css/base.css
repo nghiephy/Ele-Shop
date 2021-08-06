@@ -10,6 +10,7 @@
     --navbar-height: 34px;
     --header-height-cart: 135px;
     --header-sort-bar-height: 46px;
+    --voucher-item-height: 92px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
     --header-with-search-height-cart: calc(var(--header-height-cart) - var(--navbar-height));
 }
